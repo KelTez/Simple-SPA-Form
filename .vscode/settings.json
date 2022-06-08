@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/2244305b-3ed8-456f-8da6-7c158934df41/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/Simple-SPA-Form",
+    "appService.deploySubpath": "."
+}
