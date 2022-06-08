@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'spaUsers'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_89932536ACC042C78D32C774CCF9D348 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B79B902C30EA40828CE1275E7BC69C7C }}
           package: .
