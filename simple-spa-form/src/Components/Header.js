@@ -1,16 +1,22 @@
 import React from 'react';
-import Navbar from 'react-bootstrap';
-import brand from '/imgs/brand.png';
-import '/styles/Header.css';
-import '/styles/SPA.css';
+import { useOktaAuth } from '@okta/okta-react';
 
-function Header(){
-    return(
-        <Navbar id="nav-color" className="navigation" variant="dark" fixed="top" expand="lg">
-        <Navbar.Brand href="/"><img src={brand}></img></Navbar.Brand>
-        <div id="prototype-div"><p id="prototype-text">PROTOTYPE</p></div>
-        </Navbar>
-    );
+function Header() {
+  const { oktaAuth, authState } = useOktaAuth();
+
+  const login = async () => { await oktaAuth.signInWithRedirect(); window.location.href = "/Form"; }
+  const logout = async () => { await oktaAuth.signOut(); window.location.href = "/"; }
+
+  const loginBtn = authState.isAuthenticated
+    ? <button onClick={ logout }>Logout</button>
+    : <button onClick={ login }>Sign In</button>;
+
+  return (
+    <header>
+      <div>SPA Form</div>
+      {loginBtn}
+    </header>
+  );
 }
- 
+
 export default Header;

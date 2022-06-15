@@ -4,31 +4,23 @@ import '../../styles/SPA.css';
 import api from '../../api';
 //MERN project
 
-function FormPage(props){
+function FormPage(){
     
     /* HANDLING SUBMIT BUTTON PRESS */
     const handleSubmit= (e) => {
         e.preventDefault();
-        const data = {"fName":fname, "lName":lname, "age":age, "pNumber":pnumber,
+        const data = {"fName":fname, "lName":lname, "product":product, "pNumber":pnumber,
         "email":email, "ease":ease, "comfort":comfort, "recommend":recommend};
 
         api.addUserDetail(data).then(res => {
-            window.alert(`Details added successfully`)
-            setFname('');
-            setLname('');
-            setAge('');
-            setPnumber('');
-            setEmail('');
-            setEase('');
-            setComfort('');
-            setRecommend('');
+            window.location.href = "/Thankyou";
         })
     }
     
     /* FORM STATES */
     const [fname, setFname] = useState();
     const [lname, setLname] = useState();
-    const [age, setAge] = useState();
+    const [product, setProduct] = useState();
     const [pnumber, setPnumber] = useState();
     const [email, setEmail] = useState();
     const [ease, setEase] = useState();
@@ -56,11 +48,11 @@ function FormPage(props){
                     </div>
                 </li>
                 <li>
-                    <label for='age'>Age</label>
+                    <label for='product'>Product</label>
                     <div>
-                        <input type='number' min='1' max='150' name='age' id='age' required
-                        title="Please enter a valid age." size='3' data-component='age'
-                        onChange={e => setAge(e.target.value)} value={age}     
+                        <input type='text' name='product' id='product' required
+                        data-component='product'
+                        onChange={e => setProduct(e.target.value)} value={product}     
                         />
                     </div>
                 </li>
