@@ -1,2 +1,5 @@
 # Simple-SPA-Form
-SPA form using React &amp; Okta. To be hosted on Azure
+Simple MERN app with Okta auth/login. 
+To be hosted on Azure.
+
+Created for my own learning
