@@ -1,10 +1,9 @@
 const express = require('express')
 const cors = require('cors')
-const path = require('path')
+//const path = require('path')
 const app = express()
 const bodyParser = require("body-parser")
-
-const apiPort = 8080
+const apiPort = 8081
 
 const userDetailRouter = require('./routes/spa-user-router')
 const db = require('./db')

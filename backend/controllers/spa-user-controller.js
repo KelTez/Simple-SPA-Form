@@ -1,4 +1,5 @@
 const UserDetail = require('../models/spa-user-model')
+/* Made a bunch of request types, but only create is really needed */
 
 createUserDetail = (req, res) => {
     const body = req.body
@@ -13,7 +14,7 @@ createUserDetail = (req, res) => {
     const userDetail = new UserDetail({
         fName : body.fName,
         lName : body.lName,
-        age : body.age,
+        product : body.product,
         pNumber : body.pNumber,
         email : body.email,
         ease : body.ease,
@@ -61,7 +62,7 @@ updateUserDetail = async (req, res) => {
         }
         userDetail.fName = body.fName
         userDetail.lName = body.lName
-        userDetail.age = body.age
+        userDetail.product = body.product
         userDetail.pNumber = body.pNumber
         userDetail.email = body.email
         userDetail.ease = body.ease
