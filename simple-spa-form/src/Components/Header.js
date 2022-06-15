@@ -8,14 +8,17 @@ function Header() {
   const logout = async () => { await oktaAuth.signOut(); window.location.href = "/"; }
 
   const loginBtn = authState.isAuthenticated
-    ? <button onClick={ logout }>Logout</button>
-    : <button onClick={ login }>Sign In</button>;
+    ? <button onClick={ logout } id='login-btn'>Logout</button>
+    : <button onClick={ login } id='login-btn'>Sign In</button>;
 
   return (
-    <header>
-      <div>SPA Form</div>
-      {loginBtn}
-    </header>
+    <div className='header'>
+      <header>
+        <div id='login-btn-div'>{loginBtn}</div>
+        <div id='header-spa-form-txt-div'><p className='spa-txt'>SPA FORM</p></div>
+        
+      </header>
+    </div>
   );
 }
 

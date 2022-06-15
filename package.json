@@ -7,6 +7,6 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "start": "concurrently \"cd simple-spa-form && react-scripts start\" \"cd backend & nodemon index.js\""
+    "start": "concurrently \"cd C:\\Users\\keltezin\\Simple-SPA-Form/simple-spa-form && react-scripts start\" \"cd backend & nodemon index.js\""
   }
 }
