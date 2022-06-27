@@ -1,7 +1,5 @@
 const express = require('express')
-
 const UserDetailCtrl = require('../controllers/spa-user-controller')
-
 const router = express.Router()
 
 /* only post is necessary, but made the others as well */

@@ -26,9 +26,10 @@ function FormPage(){
     const [ease, setEase] = useState();
     const [comfort, setComfort] = useState();
     const [recommend, setRecommend] = useState();
-    /*MIGHT SPLIT THE PARTS INTO MULTIPLE COMPONENTS? OR A COMPONENT WHERE I CAN ADD LIKE PARTS*/
+
+    /*Will Create a component that creates multiple sections, since many of them are extremely similar. To work on that later*/
     return(
-       <div>
+       <div className='spa-form'>
            <form onSubmit={e => {handleSubmit(e)}}>
             <ul>
                 <li>

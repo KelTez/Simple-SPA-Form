@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function FormEnd(){
     
     return(
-        <div>
+        <div className='pt-5'>
             <h2>Thank you for submitting the form!</h2>
             <h3> Click the button below if you wish to submit another form!</h3>
             <Link to="/Form">
@@ -17,4 +17,4 @@ function FormEnd(){
     );
 }
 
-export default FormEnd
+export default FormEnd;
